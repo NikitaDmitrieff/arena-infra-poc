@@ -1,0 +1,14 @@
+services:
+  api:
+    build: ../arena-api-poc
+    container_name: arena-api
+    ports:
+      - "8000:8000"
+    restart: always
+
+  front:
+    build: ../arena-front-poc
+    container_name: arena-front
+    ports:
+      - "8080:80"
+    restart: always
