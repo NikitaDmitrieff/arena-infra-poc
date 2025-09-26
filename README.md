@@ -21,4 +21,4 @@ docker compose up -d --build
 L'API répond sur <http://localhost:8000/hello> et le front sur <http://localhost:8080>.
 
 ## CI/CD et déploiement
-Consulte `docs/ci-cd.md` pour le pipeline GitHub Actions qui orchestre build et déploiement sur la VM.
+Workflow GitHub Actions `.github/workflows/deploy.yml` : copie `docker-compose.yml` sur la VM, puis exécute `docker compose up -d` à distance.
